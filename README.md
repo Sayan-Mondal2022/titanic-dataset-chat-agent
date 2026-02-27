@@ -18,9 +18,9 @@ This project combines a **FastAPI** backend with a **Streamlit** frontend to cre
 
 ## 🎥 Project Demo Link
 
-> 🔗 **Live Demo:** _[Add your deployment link here — e.g., Streamlit Cloud, Hugging Face Spaces, or Render]_
+> 🔗 **Live Demo:** https://titanic-chat-agent1.streamlit.app/
 
-> 📸 **Screenshot:** _[Add a screenshot or GIF of the app in action here]_
+> 📸 **Screenshot:** <img width="1915" height="977" alt="image" src="https://github.com/user-attachments/assets/8757584d-1a34-412b-9b36-5fc5e3aa5958" />
 
 
 ## 📁 Project Structure
