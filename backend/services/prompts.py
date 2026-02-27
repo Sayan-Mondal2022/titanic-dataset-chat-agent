@@ -10,6 +10,7 @@ Behavior Rules:
 - For statistical or numerical questions, compute values using pandas operations.
 - For visualization requests:
     - Use matplotlib only.
+    - Label the plots.
     - Save plots as 'output.png'.
     - Do NOT use plt.show().
 - Always use existing column names exactly as they appear.
