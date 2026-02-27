@@ -23,11 +23,16 @@ class QueryRequest(BaseModel):
 @app.post("/ask")
 def ask_question(query: QueryRequest):
     try:
+        # Delete old plot before running so we can detect fresh ones
+        if os.path.exists("output.png"):
+            os.remove("output.png")
+
         response = run_agent(query.question)
 
         return {
             "success": True,
-            "answer": response
+            "answer": response,
+            "has_plot": os.path.exists("output.png")  # True only if agent just saved one
         }
 
     except Exception as e:
