@@ -7,14 +7,24 @@ import os
 
 app = FastAPI()
 
-# Allow frontend connection (important for Streamlit later)
+# Allow frontend connection (important for Streamlit later) FOR LOCAL SETUP
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:8501"],
+#     allow_credentials=True,
+#     allow_methods=["GET", "POST"],
+#     allow_headers=["Authorization", "Content-Type"],
+# )
+
+# For deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8501"],
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Authorization", "Content-Type"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
 
 class QueryRequest(BaseModel):
     question: str
